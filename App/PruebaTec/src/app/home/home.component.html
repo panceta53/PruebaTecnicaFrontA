@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        
+      <tr > 
+        <button type="button" class="btn btn-primary">Crear</button>   
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Número</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellido}}</td>
+        <td>{{usuario.correo}}</td>
+        <td>{{usuario.telefono}}</td>
+        <td>{{usuario.direccion}}</td>
+        <td><button type="button" class="btn btn-primary" [routerLink]="['/editar']" (click)="editar(usuario.usuario_id)">Actualizar</button>
+            <button type="button" class="btn btn-danger" (click)="eliminar(usuario.usuario_id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>

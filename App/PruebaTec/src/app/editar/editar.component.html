@@ -1,0 +1,10 @@
+<div *ngFor="let usu of usuario">
+    <input type="text"  placeholder="Nombre" [(ngModel)]="usu.nombre">
+    <input type="text"  placeholder="Apellido" [(ngModel)]="usu.apellido">
+    <input type="text"  placeholder="Correo" [(ngModel)]="usu.correo">
+    <input type="text"  placeholder="Telefono" [(ngModel)]="usu.telefono">
+    <input type="text"  placeholder="Direccion"[(ngModel)]="usu.direccion">
+    <button type="button" class="btn btn-primary" (click)="editar()" [routerLink]="['/']">Actualizar</button>
+</div>
+
+
